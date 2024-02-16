@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2b11e3122a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="lg.png" class="logo">
+            <ul id="sidemenu">
+                <i class="fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
+                <li><a href="#header">HOME</a></li>
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Hi! I'm <span>Christine Joy P. Tayamora</span><br>From BSIT-3A</h1>
+        </div>
+    </div>
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="second.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> I am excellent in working with others to achieve a certain objective on time with excellence.
+                    I am constantly learning new things and improving my skills since <br> I've been expanding my knowledge and improving my talents ever since. I am aware that technological advancements occur periodically.
+                    This enables me to remain updated with the most recent developments within this field.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Adaptability and a willingness to learn new technologies.</span></li>
+                            <li><span>Staying informed about industry trends.</span></li>
+                            <li><span>Updating your skill set</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>
+                                Dalubhasaan ng Lungsod ng Lucena</span><br>2021-Present</li>
+                            <li><span>St. Augustine School of Nursing</span><br>2018-2020</li>
+                            <li><span>Zaballero Subdivision Elementary School</span><br> 2008-2014</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="works">
+    <div class="container">
+        <h1 class="sub-title">Works</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="onlineresume.png">
+                <div class="layer">
+                    <h3>Online Resume</h3>
+                </div>
+            </div>
+            <div class="work">
+                <img src="spot.png">
+                <div class="layer">
+                    <h3>Responsive Landing</h3>
+                </div>
+            </div>
+            <div class="work">
+                <img src="calcu.png">
+                <div class="layer">
+                    <h3>Simple Calculator</h3>
+                </div>
+            </div>
+            <div class="work">
+                <img src="DOM.png">
+                <div class="layer">
+                    <h3>DOM AddEventListener</h3>
+                </div>
+            </div>
+            <div class="work">
+                <img src="crud.png">
+                <div class="layer">
+                    <h3>CRUD Todo List</h3>
+                </div>
+            </div>
+            <div class="work">
+                <img src="colorchange.png">
+                <div class="layer">
+
+                </div>
+                <div class="work">
+                    <img src="workingcalcu.png">
+                    <div class="layer">
+                    </div>
+                    <h3>DOM Color Changer</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title"> Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> christinetayamora22@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 09079796181</p>
+                <div class="social-icons">
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.left = "0";
+    }
+    function closemenu(){
+        sidemenu.style.left = "-200px";
+    }
+
+</script>
+</body>
+</html>
